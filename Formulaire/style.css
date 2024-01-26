@@ -1,0 +1,79 @@
+*{ /* Cractéristiques de toute la page */
+    margin: 1%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+}
+h1{ /* Cractéristiques du header */
+    height: 15vh;
+    text-align: center;
+}
+
+.error-input {
+    border: 1px solid  rgb(70, 110, 116);
+    background-color:  rgb(70, 110, 116);
+    color: rgb(70, 110, 116); /* Couleur du texte en turquoise */
+    animation: blink 1s infinite; /* Animation pour faire clignoter en gris */
+}
+
+/* MENU BURGER */
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #2f2e2e;
+    color: white;
+}
+
+/* Styles pour l'icône du menu burger */
+.burger-menu {
+    cursor: pointer;
+    display: none; /* Masqué par défaut sur les écrans plus larges */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s; /* Animation de transition pour les barres du burger */
+}
+
+/* Styles pour la liste de navigation */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styles spécifiques pour les écrans plus petits (moins de 600px) */
+@media only screen and (max-width: 600px) {
+    .burger-menu {
+        display: block; /* Affiché sur les écrans plus petits */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #2f2e2e;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--  Lien vers css -->
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <h1>Carousselle de Paysage</h1>
+
+    <div class="menu-container">
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+        <!-- Liste des liens de navigation -->
+        <ul class="nav-menu">
+            <li><a href="../Formulaire/index.html">Connexion</a></li> <!-- Lien vers la page de connexion -->
+            <li><button>Darkmode</button></li>
+        </ul>
+    </div>
+
+        <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+            <swiper-slide ><img src="Image/montagne.jpg" alt="" id="i1"></swiper-slide>
+            <swiper-slide><img src="Image/neige.jpg" alt="" id="i2"></swiper-slide>
+            <swiper-slide><img src="Image/pont.jpg" alt="" id="i3"></swiper-slide>
+          </swiper-container>
+
+    </main>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

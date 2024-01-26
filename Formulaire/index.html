@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--  Lien vers css -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+
+    <div class="menu-container">
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+        <!-- Liste des liens de navigation -->
+        <ul class="nav-menu">
+            <li><a href="../Carousselle/index.html">Accueil</a></li> <!-- Lien vers la page carousselle -->
+            <li><button>Darkmode</button></li>
+        </ul>
+    </div>
+
+    <form action=""> 
+
+        <fieldset>
+            <legend>Informations Personnelles</legend>
+            <!--Champs de Texte de l'utilisateur pour le prénom-->
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom">
+            <!--Champs de Texte de l'utilisateur pour le nom-->
+            <label for="nom">Nom</label>
+            <input type="text" id="nom">
+            <!--Champs de Texte de l'utilisateur pour le mot de passe-->
+            <label for="mdp">MDP</label>
+            <input type="password" id="mdp">
+            <!--Champs de Texte de l'utilisateur pour l'email-->
+            <label for="mail">Email</label>
+            <input type="email" id="mail">
+            <!--Message d'erreur dû au mot de passe non valide-->
+            <p id="motDePasseError" class="error"></p>
+            <!--Plusieurs Listes Déroulantes pour le choix de la date de naissance-->
+            <legend>Date de Naissance :</legend>
+            <!--Listes Déroulante pour le jour de naissance-->
+            <select name="" id="j">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <!--Listes Déroulante pour le mois de naissance-->
+            <select name="" id="m">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <!--Listes Déroulante pour l'année de naissance-->
+            <select name="" id="a">
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="Autre">Avant 1990</option> <!--C'est Long de faire 100 ans-->
+            </select>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Autres Informations</legend>
+            <legend>Genre :</legend>
+            <!--Case à cocher de l'utilisateur pour le genre-->
+            <label for="f">Femme</label>
+            <input type="radio" name="genre" id="f" value="Femme">
+            <label for="h">Homme</label>
+            <input type="radio" name="genre" id="h" value="Homme">
+            <!--Message d'erreur dû à aucune case coché pour le genre-->
+            <p id="genreError" class="error"></p>
+        
+            <legend>Nationalité :</legend> <!-- Liste Déroulante -->
+            <select name="" id="nat">
+                <option value="France">France</option>
+                <option value="Canarie">Canarie</option>
+                <option value="Australie">Australie</option>
+                <option value="Espagne">Espagne</option>
+            </select>
+        
+            
+            <legend>Commentaires :</legend>
+            <label for="">Zone Commentaire</label>
+            <textarea id="commentaire" name="commentaire" rows="4" cols="50"></textarea>
+            <label for="">Couleur</label>
+            <input type="color" name="" id="co">
+
+            <input type="checkbox" id="abonnement" name="abonnement" value="Je m'abonne.">
+            <label for="abonnement">S'abonner à la newsletter</label>
+        </fieldset>
+
+        <input type="submit" value="Valider" id="valider">
+        <input type="reset" value="Effacer">
+
+
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
